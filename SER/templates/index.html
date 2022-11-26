@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VoiEmo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid text-light">
+    <a class="navbar-brand" href="#">VoiEmo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="file:///C:/Users/vikas/Desktop/SER/login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#ourService">Service</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://media-public.canva.com/MADQ5KjU2zI/1/screen_2x.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+<div id="ourService" style="margin-top: 30px">
+ <center> <h2>
+  OUR SERVICES <br>
+</h2>
+
+<h4><small class="text">Check Your Audio With A Speech Sample</small> </center></h4>
+<div class="row" style="width: 100%;margin-top:50px">
+<div class="card" style="width: 20rem; margin-left: 300px;">
+
+  <a class="nav-link active" aria-current="page" href="#exampleModal">
+  <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPhwa2br4_jSbUWGjVWhSQTCoguAM8EYZ43w&usqp=CAU' class="card-img-top" alt="..." style="height: 22rem"></a>
+  <div class="card-body" style="">
+    <p class="card-text">Upload An Audio File</p>
+    <form method="post" action="/" enctype="multipart/form-data">
+    <input style="margin-top: 10px" class='form-control' type="file" name="audioFile"/>
+    <center><input style="margin-top: 18px" class="btn btn-primary" type="submit" id="submitButton" value="Recognize"/></center>
+    </form>
+  </div>
+
+</div>
+<div class="card" style="width: 20rem; margin-left: 300px; ">
+  <center><h2><small class="text">Prediction</small></h2></center>
+  {% if p=='fearful' %}
+  <img src='https://media2.giphy.com/media/14ut8PhnIwzros/giphy.gif' class="card-img-top" alt="..." style="height: 22rem">
+    <b><center><h3><p style="padding-top: 30px">You are in {{p}} mood.</p></center></h3></b>
+  {% endif %}
+  {% if p=='calm' %}
+  <img src='https://media.tenor.com/NMPvwSbA4ioAAAAM/chill-zen.gif' class="card-img-top" alt="..." style="height: 22rem">
+    <b><center><h3><p style="padding-top: 30px">You are in {{p}} mood.</p></center></h3></b>
+  {% endif %}
+  {% if p=='happy' %}
+  <img src='https://media.tenor.com/9cf_zVdCq34AAAAM/dancing-happy.gif' class="card-img-top" alt="..." style="height: 22rem">
+    <b><center><h3><p style="padding-top: 30px">You are in {{p}} mood.</p></center></h3></b>
+  {% endif %}
+</div>
+</div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <div class="container-fluid bg-dark text-light">
+	<p class="text-center mb-0">Copyright SER 2022 | All rights reserved</p>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
